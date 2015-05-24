@@ -13,13 +13,11 @@ cl3 = Client.new name: 'Bruce Wayne', age: 34, gender: 'Male', balance: 100000, 
 cl4 = Client.new name: 'Britney Spears', age: 33, gender: 'Female', balance: 57000, portfolio: 1
 cl5 = Client.new name: 'Homer Simpson', age: 40, gender: 'Male', balance: 16000, portfolio: 1
 
-brokerage.client[cl1.name] = cl1
-brokerage.client[cl2.name] = cl2
-brokerage.client[cl3.name] = cl3
+#Adding clients into the brokerage. 
+brokerage. << cl1 << cl2 << cl3 << cl4 << cl5
 
-
-
-
+binding.pry
+nil
 
 
 
@@ -28,14 +26,19 @@ brokerage.client[cl3.name] = cl3
 def menu
   puts `clear`
   puts '*** GASE ***'
-  puts '1 - Create a client'
-  puts '2 - Create a portfolio'
-  puts '3 - Purchase Stocks'
-  puts '4 - Sell Stocks'
-  puts '5 - List all clients and their balances'
-  puts "6 - List a client's portfolios and associated values"
-  puts "7 - List all stocks in a portfolio and associated values"
+  puts "1 - Create a client\n"
+  puts "2 - Create a portfolio\n"
+  puts "3 - Purchase Stocks\n"
+  puts "4 - Sell Stocks\n"
+  puts "5 - List all clients and their balances\n"
+  puts "6 - List a client's portfolios and associated values\n"
+  puts "7 - List all stocks in a portfolio and associated values\n"
   puts 'q - Quit program'
   print "--> "
   gets.chomp.downcase
 end
+
+
+# response = menu
+# while response != 'q'
+#   case 
