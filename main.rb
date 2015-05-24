@@ -14,12 +14,13 @@ cl4 = Client.new name: 'Britney Spears', age: 33, gender: 'Female', balance: 570
 cl5 = Client.new name: 'Homer Simpson', age: 40, gender: 'Male', balance: 16000, portfolio: 1
 
 #Adding clients into the brokerage. 
-brokerage. << cl1 << cl2 << cl3 << cl4 << cl5
+#brokerage. << cl1 << cl2 << cl3 << cl4 << cl5
 
-binding.pry
-nil
-
-
+pf1 = Portfolio.new name: 'Quahog', stocks: 'AAl'
+pf2 = Portfolio.new name: 'Sunnydale', stocks: 'AAPL'
+pf3 = Portfolio.new name: 'Arkham', stocks: 'GOOGL'
+pf4 = Portfolio.new name: 'Las Vegas', stocks:'VTL'
+pf4 = Portfolio.new name: 'Springfield', stocks: 'DWA'
 
 
 
@@ -39,6 +40,28 @@ def menu
 end
 
 
-# response = menu
-# while response != 'q'
-#   case 
+response = menu
+while response != 'q'
+  case response
+  when '1'
+    print "Name: "
+    name = gets.chomp
+    print "Age: "
+    age = gets.chomp.to_i
+    print "Gender: "
+    gender = gets.chomp
+    print "Balance: "
+    balance = gets.chomp.to_i
+    print "Portfolio: "
+    portfolio = gets.chomp.to_i
+    client = Client.new name: name, age: age, gender: gender, balance: balance, portfolio: portfolio
+    brokerage.clients.client.name = client
+  when '2'
+    print "Name: "
+    name = gets.chomp
+    print = "Stocks: "
+    stocks = gets.chomp
+    portfolio = Portfolio.new name: name, stocks: stocks
+  end
+  response = menu
+end

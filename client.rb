@@ -10,4 +10,8 @@ class Client
     @portfolio = []
   end
 
+  def display_portfolios
+    portfolios.keys.join(', ')
+  end
+
 end
