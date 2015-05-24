@@ -1,6 +1,6 @@
 class Portfolio
 
-  def initialize
+  def initialize(options={})
   end
 
 end

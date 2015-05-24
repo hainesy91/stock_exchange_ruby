@@ -1,6 +1,6 @@
 class Stock
 
-  def initialize
+  def initialize(options{})
   end
 
 end

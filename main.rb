@@ -13,7 +13,9 @@ cl3 = Client.new name: 'Bruce Wayne', age: 34, gender: 'Male', balance: 100000, 
 cl4 = Client.new name: 'Britney Spears', age: 33, gender: 'Female', balance: 57000, portfolio: 1
 cl5 = Client.new name: 'Homer Simpson', age: 40, gender: 'Male', balance: 16000, portfolio: 1
 
-
+brokerage.client[cl1.name] = cl1
+brokerage.client[cl2.name] = cl2
+brokerage.client[cl3.name] = cl3
 
 
 
